@@ -130,8 +130,38 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'nombre' => [
+            'required' => 'El nombre del estudiante es requerido',
+            'string' => 'El nombre debe ser un texto',
+            'max:45' => 'El nombre debe de ser más corto'
+        ],
+        'apellido' => [
+            'required' => 'El apellido del estudiante es requerido',
+            'string' => 'El apellido debe ser un texto',
+            'max:45' => 'El apellido debe de ser más corto'
+        ],
+        'correo' => [
+            'required' => 'El correo del estudiante es requerido',
+            'string' => 'El correo debe ser un texto',
+            'max:45' => 'El correo debe de ser más corto',
+            'email' => 'El formato del correo es incorrecto',
+            'unique' => 'El correo ya existe'
+        ],
+        'carrera' => [
+            'required' => 'La carrera del estudiante es requerida',
+            'string' => 'La carrera debe ser un texto',
+            'max:45' => 'La carrera debe de ser más corta'
+        ],
+        'semestre' => [
+            'required' => 'El semestre del estudiante es requerido',
+            'string' => 'El semestre debe ser un texto',
+            'max:45' => 'El semestre debe de ser más corto'
+        ],
+        'carne' => [
+            'required' => 'El carne del estudiante es requerido',
+            'string' => 'El carne debe ser un texto',
+            'max:45' => 'El carne debe de ser más corto',
+            'unique' => 'El carne ya existe'
         ],
     ],
 
