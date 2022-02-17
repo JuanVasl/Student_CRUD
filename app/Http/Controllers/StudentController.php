@@ -36,6 +36,21 @@ class StudentController extends Controller
         return back()->with('estudianteSave','El Estudiante se guardo con exito');
     }
 
+    //Formulario Update Student
+    public function update($id){
+        $estudiante = Estudiante::findOrFail($id);
+
+        return view('estudiantes.updateStudent', compact('estudiante'));
+    }
+
+    //edit Student
+    public function edit(Request $request, $id){
+        $dataStudent = $request()->except((['_token', '_method']));
+        Estudiante::where('id', '=', $id)->update($dataStudent);
+
+        return back()->with('estudianteUpdate','El Estudiante se modifico con exito');
+    }
+
     //Delete Student
     public function delete($id){
         Estudiante::destroy($id);

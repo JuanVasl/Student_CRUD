@@ -40,12 +40,18 @@
                             <td> {{ $student ->  semestre }} </td>
                             <td> {{ $student ->  carne }} </td>
                             <td>
-                                <form action="{{ route('delete', $student->id) }}" method="POST">
-                                    @csrf @method('DELETE')
-                                    <button type="submit" onclick="return confirm('¿Seguro que deseas eliminar el Estudiante?')" class="btn btn-outline-danger btn-sm">
-                                        <i class="fas fa-trash-alt"> Delete</i>
-                                    </button>
-                                </form>
+                                <div class="btn-group">
+                                    <a href="{{route('update', $student->id)}}">
+                                        <i class="fas fa-pencil-alt btn btn-outline-primary mr-2"></i>
+                                    </a>
+
+                                    <form action="{{ route('delete', $student->id) }}" method="POST">
+                                        @csrf @method('DELETE')
+                                        <button type="submit" onclick="return confirm('¿Seguro que deseas eliminar el Estudiante?')" class="btn btn-outline-danger btn-sm">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                     @endforeach
