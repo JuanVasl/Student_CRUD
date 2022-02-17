@@ -15,7 +15,7 @@
 
     <title>@yield('title') - APP Student</title>
 </head>
-<body>
+<body style="background-color: #B4E6FF">
     <div class="container">
         @yield('content')
     </div>

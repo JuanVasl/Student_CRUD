@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
+    //Read Student
+    public function studentread(){
+        $data['studets'] = Estudiante::paginate(10);
+
+        return view('estudiantes.readStudent', $data);
+    }
+
     //Formuilario Create Student
     public function studentform(){
         return view('estudiantes.createStudent');
