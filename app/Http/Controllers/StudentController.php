@@ -35,4 +35,11 @@ class StudentController extends Controller
 
         return back()->with('estudianteSave','El Estudiante se guardo con exito');
     }
+
+    //Delete Student
+    public function delete($id){
+        Estudiante::destroy($id);
+
+        return back()->with('estudianteDelete','El Estudiante se Elimino con exito');
+    }
 }

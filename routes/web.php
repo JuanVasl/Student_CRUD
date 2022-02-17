@@ -10,3 +10,5 @@ Route::get('/', [StudentController::class, 'studentread']);
 Route::get('/Student/Create', [StudentController::class, 'studentform']);
 //Save Student
 Route::post('/Student/Save', [StudentController::class, 'save'])->name('save');
+//Delete Student
+Route::delete('/Student/delete/{id}', [StudentController::class, 'delete'])->name('delete');
